@@ -1,38 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo|Nunito:900&display=swap');
+
+html,
+body,
+h1 {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+	text-align: center;
+	color: #fef6fb;
+	font-family: 'Nunito', sans-serif;
+
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.centered {
+	flex: 2 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+	/* ettol lesz kozepen */
+	align-self: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.right {
+	order: -1;
+	/* display: flex;
+	align-items: flex-start;
+	justify-content: center; */
+
+	align-self: flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.weather > h2,
+.weather > h3 {
+	padding: 0;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.weather {
+	padding-right: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.quote {
+	font-family: 'Heebo', sans-serif;
+	font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
+h1 {
+	font-size: 7rem;
+	font-weight: bolder;
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: 800;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+/* TODO
+loading screen
+bg images for all time of the day
+try maybe onKeyPress (event.key == enter) on Username*/
