@@ -65,7 +65,7 @@ export class App extends Component {
 		)
 			.then(response => response.json())
 			.then(result =>
-				this.setState({ backgroundImage: result.urls.full })
+				this.setState({ backgroundImage: result.urls.regular })
 			);
 	};
 	loading = () => {
