@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { css } from '@emotion/core';
 import RingLoader from 'react-spinners/RingLoader';
-import { trackPromise } from 'react-promise-tracker';
 
 import Weather from './components/Weather';
 import Time from './components/Time';
@@ -65,7 +64,7 @@ export class App extends Component {
 		)
 			.then(response => response.json())
 			.then(result =>
-				this.setState({ backgroundImage: result.urls.regular })
+				this.setState({ backgroundImage: result.urls.full })
 			);
 	};
 	loading = () => {
@@ -89,10 +88,7 @@ export class App extends Component {
 				<div
 					className='App'
 					style={{
-						background: `linear-gradient(
-							rgba(0, 0, 0, 0.2),
-							rgba(0, 0, 0, 0.2)
-						  ),url(${this.state.backgroundImage})`
+						backgroundImage: `url(${this.state.backgroundImage})`
 					}}
 				>
 					<div className='centered'>
