@@ -40,19 +40,7 @@ export class UserName extends Component {
 							: 'Ide add meg a neved és kattints ki a mezőből'}
 					</span>
 				</h2>
-				<h3>
-					<span>Mire Fókuszálsz ma?, </span>
-					<span
-						contentEditable='true'
-						suppressContentEditableWarning={true}
-						ref={this.FocusRef}
-						onBlur={this.handleFocusBlur}
-					>
-						{typeof this.state.focus != 'undefined'
-							? localStorage.getItem('focus')
-							: 'Ide írd hogy mire fókuszálsz'}
-					</span>
-				</h3>
+			
 			</div>
 		);
 	}
